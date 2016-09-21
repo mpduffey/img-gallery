@@ -5,8 +5,8 @@ import {Component, Input}				from '@angular/core';
 	template:				`
 		<div id="gallery" class="container">
 			<div class="row gallery">
-				<h2 class="page-title">Wisconsin Women <span class="text-light">for Trump Image Gallery</span></h2>
-				<img *ngFor="let image of images" [src]="image.src" (click)="showImage($event)">
+				<h2 class="page-title">{{gallery.boldTitle}}<span class="text-light">{{gallery.lightTitle}}</span></h2>
+				<img *ngFor="let image of gallery.imgs" [src]="image.src" (click)="showImage($event)">
 			</div>
 		</div>
 		<div class="light-box" *ngIf="showLightBox" (click)="hideImage()">
@@ -26,7 +26,7 @@ import {Component, Input}				from '@angular/core';
 })
 
 export class ImgGallery {
-	@Input() images;
+	@Input() gallery;
 	showLightBox = false;
 
 	showImage = (e) => {
