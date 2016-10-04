@@ -14,7 +14,7 @@ import {Component, Input}				from '@angular/core';
 		</div>
 	`,
 	styles:					[`
-		.gallery img {display: block; max-width: 250px; max-height: 150px; width: auto; height: auto; float: left; margin: 10px 10px;}
+		.gallery img {display: block; max-height: 150px; width: auto; height: auto; float: left; margin: 10px 10px;}
 		.gallery img:hover {cursor: pointer;}
 		.container {background-color: white; margin: 0; width: 100%;}
 		.row {padding: 40px;}
